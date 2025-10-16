@@ -1,42 +1,47 @@
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+
+declare global {
+  interface Window {
+    dataLayer: any[];
+    gtag: (...args: any[]) => void;
+  }
+}
 
 const GoogleAnalytics = () => {
-  const location = useLocation();
-
   useEffect(() => {
+    // Only run on client-side
+    if (typeof window === 'undefined') return;
+
+    // Skip if already initialized
+    if (window.dataLayer && window.gtag) return;
+
+    // Create dataLayer if it doesn't exist
+    window.dataLayer = window.dataLayer || [];
+
+    // Define the gtag function
+    function gtag() {
+      // eslint-disable-next-line prefer-rest-params
+      window.dataLayer.push(arguments);
+    }
+
+    // Initialize gtag
+    window.gtag = gtag;
+    window.gtag('js', new Date());
+    window.gtag('config', 'G-MXL5PY3LKM');
+
     // Load Google Analytics script
     const script = document.createElement('script');
     script.async = true;
     script.src = 'https://www.googletagmanager.com/gtag/js?id=G-MXL5PY3LKM';
     document.head.appendChild(script);
 
-    // Initialize dataLayer and gtag function
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      // eslint-disable-next-line prefer-rest-params
-      window.dataLayer.push(arguments);
-    }
-    window.gtag = gtag;
-    window.gtag('js', new Date());
-    window.gtag('config', 'G-MXL5PY3LKM');
-
     // Cleanup function
     return () => {
-      document.head.removeChild(script);
-      delete window.dataLayer;
-      delete window.gtag;
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
     };
   }, []);
-
-  // Track page views on route changes
-  useEffect(() => {
-    if (window.gtag) {
-      window.gtag('config', 'G-MXL5PY3LKM', {
-        page_path: location.pathname + location.search,
-      });
-    }
-  }, [location]);
 
   return null; // This component doesn't render anything
 };
