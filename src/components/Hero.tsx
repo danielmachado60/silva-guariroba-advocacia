@@ -53,7 +53,9 @@ const Hero = () => {
             <div className="space-y-2 px-4 text-center lg:text-left">
               <div className="flex justify-center lg:justify-start">
                 <a 
-                  href="#contato" 
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent/90 text-primary font-bold py-3 sm:py-4 px-8 sm:px-12 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-elegant text-sm sm:text-base w-full sm:w-auto"
                 >
                   FALE COM UM ESPECIALISTA
