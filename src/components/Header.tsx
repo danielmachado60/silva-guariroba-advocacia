@@ -6,40 +6,49 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-accent/20">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex items-center">
             <a href="/" className="block">
               <img 
                 src="/images/logo.png" 
                 alt="Silva Guairoba Advogados" 
-                className="h-20 w-auto object-contain"
+                className="h-16 md:h-20 w-auto object-contain"
               />
             </a>
           </div>
 
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="#areas" className="text-white/90 hover:text-white transition-colors text-sm font-medium">
+          <nav className="hidden md:flex items-center gap-4 lg:gap-8">
+            <a 
+              href="#areas" 
+              className="text-white/90 hover:text-white transition-colors text-sm font-medium whitespace-nowrap"
+            >
               Áreas de Atuação
             </a>
-            <a href="#casos" className="text-white/90 hover:text-white transition-colors text-sm font-medium">
+            <a 
+              href="#casos" 
+              className="text-white/90 hover:text-white transition-colors text-sm font-medium whitespace-nowrap"
+            >
               Casos de Sucesso
             </a>
-            <a href="#equipe" className="text-white/90 hover:text-white transition-colors text-sm font-medium">
+            <a 
+              href="#equipe" 
+              className="text-white/90 hover:text-white transition-colors text-sm font-medium whitespace-nowrap"
+            >
               Equipe
             </a>
           </nav>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
             <a 
               href="tel:+5548991952345" 
               className="sm:hidden flex-shrink-0"
             >
               <Button 
-                size="lg" 
-                className="bg-accent hover:bg-accent/90 text-primary font-bold shadow-elegant whitespace-nowrap w-full"
+                size="sm" 
+                className="bg-accent hover:bg-accent/90 text-primary font-bold shadow-elegant whitespace-nowrap h-9 px-3 text-xs"
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-3.5 h-3.5 mr-1.5" />
                 Ligar
               </Button>
             </a>
@@ -50,10 +59,10 @@ const Header = () => {
               className="hidden sm:block flex-shrink-0"
             >
               <Button 
-                size="lg" 
-                className="bg-[#25D366] hover:bg-[#128C7E] text-white font-bold shadow-elegant whitespace-nowrap"
+                size="sm" 
+                className="bg-[#25D366] hover:bg-[#128C7E] text-white font-bold shadow-elegant whitespace-nowrap h-9 px-4 text-xs sm:text-sm"
               >
-                <MessageCircle className="w-5 h-5 mr-2" />
+                <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5" />
                 <span className="uppercase">Falar com advogado</span>
               </Button>
             </a>

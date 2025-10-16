@@ -5,94 +5,87 @@ const Contato = () => {
   const whatsappLink = "https://wa.me/5548991952345?text=Olá, gostaria de ajuda para meu caso";
 
   return (
-    <section className="py-24 bg-gradient-hero text-white">
+    <section className="py-12 md:py-24 bg-gradient-hero text-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16 animate-fade-in">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 px-4">
             NÓS PODEMOS TE AJUDAR!
           </h2>
-          <p className="text-xl text-white/90 mb-8">
+          <p className="text-lg md:text-xl text-white/90 mb-6 md:mb-8 px-4">
             Conte com nossa expertise em direito criminal para uma defesa sólida em todas as instâncias 
             de seu processo através de um atendimento com atualização constante do seu caso.
           </p>
-          <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-primary font-bold shadow-elegant text-lg px-8 py-6">
-              FALE CONOSCO AGORA
-            </Button>
-          </a>
+          <div className="px-4">
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="w-full md:w-auto bg-accent hover:bg-accent/90 text-primary font-bold shadow-elegant text-lg px-6 md:px-8 py-4 md:py-6">
+                FALE CONOSCO AGORA
+              </Button>
+            </a>
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
           {/* Contact Info */}
-          <div className="space-y-6">
-            <h3 className="text-2xl font-bold mb-6">Informações de Contato</h3>
+          <div className="space-y-4 md:space-y-6 text-center md:text-left">
+            <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Informações de Contato</h3>
             
-            <div className="flex items-start gap-4">
-              <MapPin className="w-6 h-6 text-white flex-shrink-0 mt-1" />
+            <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-4 justify-center md:justify-start">
+              <div className="flex justify-center md:justify-start">
+                <MapPin className="w-5 h-5 md:w-6 md:h-6 text-white flex-shrink-0 mt-1" />
+              </div>
               <div>
                 <p className="font-semibold mb-1">Endereço</p>
-                <p className="text-white/80">
+                <p className="text-white/80 text-sm md:text-base">
                   Av. Eng. Max de Souza - Coqueiros<br />
                   Florianópolis - SC, CEP 88080-000
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start gap-4">
-              <Phone className="w-6 h-6 text-white flex-shrink-0 mt-1" />
+            <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-4 justify-center md:justify-start">
+              <div className="flex justify-center md:justify-start">
+                <Phone className="w-5 h-5 md:w-6 md:h-6 text-white flex-shrink-0 mt-1" />
+              </div>
               <div>
                 <p className="font-semibold mb-1">Telefone</p>
-                <p className="text-white/80">(48) 99195-2345</p>
+                <p className="text-white/80 text-sm md:text-base">(48) 99195-2345</p>
               </div>
             </div>
 
-            <div className="flex items-start gap-4">
-              <Mail className="w-6 h-6 text-white flex-shrink-0 mt-1" />
+            <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-4 justify-center md:justify-start">
+              <div className="flex justify-center md:justify-start">
+                <Mail className="w-5 h-5 md:w-6 md:h-6 text-white flex-shrink-0 mt-1" />
+              </div>
               <div>
                 <p className="font-semibold mb-1">E-mail</p>
-                <p className="text-white/80">contato@jrsilva.adv.br</p>
+                <p className="text-white/80 text-sm md:text-base">contato@jrsilva.adv.br</p>
               </div>
             </div>
-
-            {/* <div className="flex items-start gap-4">
-              <Instagram className="w-6 h-6 text-white flex-shrink-0 mt-1" />
-              <div>
-                <p className="font-semibold mb-1">Instagram</p>
-                <a 
-                  href="https://instagram.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-white/80 hover:underline"
-                >
-                  @jrsilva.adv
-                </a>
-              </div>
-            </div> */}
           </div>
 
           {/* Features */}
-          <div className="space-y-6">
-            <h3 className="text-2xl font-bold mb-6">Nossos Diferenciais</h3>
+          <div className="space-y-4 md:space-y-6 text-center md:text-left">
+            <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Nossos Diferenciais</h3>
             
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
+            <div className="space-y-3 md:space-y-4">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-3">
                 <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-white/90">Tradição jurídica e luta pelos direitos dos nossos clientes</p>
+                <p className="text-white/90 text-sm md:text-base">Tradição jurídica e luta pelos direitos dos nossos clientes</p>
               </div>
               
-              <div className="flex items-start gap-3">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-3">
                 <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-white/90">Escritório altamente especializado em Direito Criminal</p>
+                <p className="text-white/90 text-sm md:text-base">Escritório altamente especializado em Direito Criminal</p>
               </div>
               
-              <div className="flex items-start gap-3">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-3">
                 <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-white/90">Constante atualização sobre seu caso em todas as etapas</p>
+                <p className="text-white/90 text-sm md:text-base">Constante atualização sobre seu caso em todas as etapas</p>
               </div>
               
-              <div className="flex items-start gap-3">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-3">
                 <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-white/90">Plantão 24 horas para atendimento de emergência</p>
+                <p className="text-white/90 text-sm md:text-base">Plantão 24 horas para atendimento de emergência</p>
               </div>
             </div>
           </div>
