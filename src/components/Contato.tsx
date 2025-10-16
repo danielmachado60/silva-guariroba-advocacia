@@ -1,5 +1,7 @@
 import { MapPin, Phone, Mail, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { FaWhatsapp } from "react-icons/fa";
+
 
 const Contato = () => {
   const whatsappLink = "https://wa.me/5548991952345?text=Olá, gostaria de ajuda para meu caso";
@@ -15,10 +17,11 @@ const Contato = () => {
             Conte com nossa expertise em direito criminal para uma defesa sólida em todas as instâncias 
             de seu processo através de um atendimento com atualização constante do seu caso.
           </p>
-          <div className="px-4">
+          <div className="px-4 flex justify-center">
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="w-full md:w-auto bg-accent hover:bg-accent/90 text-primary font-bold shadow-elegant text-lg px-6 md:px-8 py-4 md:py-6">
-                FALE CONOSCO AGORA
+              <Button size="lg" className="w-full md:w-auto bg-accent hover:bg-accent/90 text-primary font-bold shadow-elegant text-lg px-6 md:px-8 py-4 md:py-6 flex items-center gap-2">
+                <FaWhatsapp className="w-5 h-5" />
+                <span>FALE CONOSCO AGORA</span>
               </Button>
             </a>
           </div>

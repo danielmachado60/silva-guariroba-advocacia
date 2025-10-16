@@ -1,5 +1,7 @@
 import { MessageCircle, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { FaWhatsapp } from "react-icons/fa";
+
 
 const Hero = () => {
   const whatsappLink = "https://wa.me/5548991952345?text=Olá, gostaria de ajuda para meu caso";
@@ -56,9 +58,10 @@ const Hero = () => {
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent/90 text-primary font-bold py-3 sm:py-4 px-8 sm:px-12 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-elegant text-sm sm:text-base w-full sm:w-auto"
+                  className="inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent/90 text-primary font-bold py-3 sm:py-4 px-8 sm:px-12 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-elegant text-sm sm:text-base w-full sm:w-auto"
                 >
-                  FALE COM UM ESPECIALISTA
+                  <FaWhatsapp className="w-5 h-5" />
+                  <span>FALE COM UM ESPECIALISTA</span>
                 </a>
               </div>
               <p className="text-white/80 text-sm">

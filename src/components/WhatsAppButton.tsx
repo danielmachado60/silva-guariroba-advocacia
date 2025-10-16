@@ -1,5 +1,7 @@
 import { Phone } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { useState, useEffect } from "react";
+
 
 const WhatsAppButton = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,11 +35,7 @@ const WhatsAppButton = () => {
             onClick={(e) => e.stopPropagation()}
             aria-label="Enviar mensagem no WhatsApp"
           >
-            <img 
-              src="/images/whatsapp-icon.svg" 
-              alt="WhatsApp" 
-              className="w-7 h-7" 
-            />
+            <FaWhatsapp className="w-7 h-7" />
           </a>
           <a
             href={phoneLink}

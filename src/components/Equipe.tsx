@@ -1,6 +1,7 @@
-import { MessageCircle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { FaWhatsapp } from "react-icons/fa";
+
 
 const advogados = [
   {
@@ -74,7 +75,7 @@ const Equipe = () => {
                   <div className="mt-8">
                     <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                       <Button className="bg-primary hover:bg-primary/90 text-accent font-bold w-full sm:w-auto">
-                        <MessageCircle className="w-4 h-4 mr-2" />
+                        <FaWhatsapp className="w-4 h-4 mr-2" />
                         AGENDAR CONSULTORIA
                       </Button>
                     </a>

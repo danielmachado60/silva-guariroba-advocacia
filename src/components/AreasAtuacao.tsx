@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MessageCircle } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
+
 
 const areas = [
   {
@@ -90,7 +91,7 @@ const AreasAtuacao = () => {
                     className="inline-flex items-center justify-center w-full px-4 py-2.5 bg-[#25D366] hover:bg-[#128C7E] text-white font-bold rounded-md shadow-elegant transition-colors duration-200 mt-auto"
                   >
                     <span>Falar com especialista</span>
-                    <MessageCircle className="w-5 h-5 ml-2" />
+                    <FaWhatsapp className="w-5 h-5 ml-2" />
                   </a>
                 </div>
               </Card>
@@ -106,7 +107,7 @@ const AreasAtuacao = () => {
               size="lg" 
               className="bg-accent hover:bg-accent/90 text-primary font-bold shadow-elegant"
             >
-              <MessageCircle className="w-5 h-5 mr-2" />
+              <FaWhatsapp className="w-5 h-5 mr-2" />
               FALAR COM ESPECIALISTA CRIMINAL
             </Button>
           </a>
