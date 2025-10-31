@@ -74,7 +74,7 @@ const Hero = () => {
           <div className="relative mt-12 lg:mt-0">
             <div className="relative z-10">
               <img 
-                src="/images/fotocapa.png" 
+                src="/images/fotocapa.webp" 
                 alt="Silva & Guariroba Advocacia" 
                 className="w-full h-auto max-w-xs md:max-w-sm lg:max-w-md mx-auto rounded-lg shadow-xl"
               />
