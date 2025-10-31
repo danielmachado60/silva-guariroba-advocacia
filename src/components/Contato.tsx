@@ -11,7 +11,7 @@ const Contato = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 px-4">
-            NÓS PODEMOS TE AJUDAR!
+           Entre em contato conosco
           </h2>
           <p className="text-lg md:text-xl text-white/90 mb-6 md:mb-8 px-4">
             Conte com nossa expertise em direito criminal para uma defesa sólida em todas as instâncias 
