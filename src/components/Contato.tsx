@@ -7,7 +7,7 @@ const Contato = () => {
   const whatsappLink = "https://wa.me/5548991952345?text=Olá, gostaria de ajuda para meu caso";
 
   return (
-    <section className="py-12 md:py-24 bg-gradient-hero text-white">
+    <section id="contato" className="py-12 md:py-24 bg-gradient-hero text-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 px-4">
@@ -71,26 +71,26 @@ const Contato = () => {
             <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Nossos Diferenciais</h3>
             
             <div className="space-y-3 md:space-y-4">
-              <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-3">
-                <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-white/90 text-sm md:text-base">Tradição jurídica e luta pelos direitos dos nossos clientes</p>
-              </div>
-              
-              <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-3">
-                <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-white/90 text-sm md:text-base">Escritório altamente especializado em Direito Criminal</p>
-              </div>
-              
-              <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-3">
-                <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-white/90 text-sm md:text-base">Constante atualização sobre seu caso em todas as etapas</p>
-              </div>
-              
-              <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-3">
-                <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-white/90 text-sm md:text-base">Plantão 24 horas para atendimento de emergência</p>
-              </div>
-            </div>
+  <div className="flex items-start gap-3"> 
+    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+    <p className="text-white/90 text-sm md:text-base">Tradição jurídica e luta pelos direitos dos nossos clientes</p>
+  </div>
+  
+  <div className="flex items-start gap-3"> 
+    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+    <p className="text-white/90 text-sm md:text-base">Escritório altamente especializado em Direito Criminal</p>
+  </div>
+  
+  <div className="flex items-start gap-3"> 
+    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+    <p className="text-white/90 text-sm md:text-base">Constante atualização sobre seu caso em todas as etapas</p>
+  </div>
+  
+  <div className="flex items-start gap-3">  
+    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+    <p className="text-white/90 text-sm md:text-base">Plantão 24 horas para atendimento de emergência</p>
+  </div>
+</div>
           </div>
         </div>
 

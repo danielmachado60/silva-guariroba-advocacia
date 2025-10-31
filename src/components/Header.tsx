@@ -1,8 +1,23 @@
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone, MessageCircle, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 const Header = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const whatsappLink = "https://wa.me/5548991952345?text=Olá, gostaria de ajuda para meu caso";
+
+  const menuItems = [
+    { href: "#depoimentos", label: "Depoimentos" },
+    { href: "#areas", label: "Áreas de Atuação" },
+    { href: "#casos", label: "Casos de Sucesso" },
+    { href: "#operacoes", label: "Operações" },
+    { href: "#equipe", label: "Sobre" },
+    { href: "#contato", label: "Contato" },
+  ];
+
+  const handleMenuClick = () => {
+    setMobileMenuOpen(false);
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-accent/20">
@@ -18,57 +33,53 @@ const Header = () => {
             </a>
           </div>
 
-          <nav className="hidden md:flex items-center gap-4 lg:gap-8">
-            <a 
-              href="#areas" 
-              className="text-white/90 hover:text-white transition-colors text-sm font-medium whitespace-nowrap"
-            >
-              Áreas de Atuação
-            </a>
-            <a 
-              href="#casos" 
-              className="text-white/90 hover:text-white transition-colors text-sm font-medium whitespace-nowrap"
-            >
-              Casos de Sucesso
-            </a>
-            <a 
-              href="#equipe" 
-              className="text-white/90 hover:text-white transition-colors text-sm font-medium whitespace-nowrap"
-            >
-              Equipe
-            </a>
-          </nav>
-
           <div className="flex items-center gap-2 sm:gap-4">
-            <a 
-              href="tel:+5548991952345" 
-              className="sm:hidden flex-shrink-0"
+            {/* Desktop Menu */}
+            <nav className="hidden md:flex items-center gap-4 lg:gap-6">
+              {menuItems.map((item) => (
+                <a 
+                  key={item.href}
+                  href={item.href} 
+                  className="text-white/90 hover:text-white transition-colors text-base font-medium whitespace-nowrap"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden flex-shrink-0 text-white p-2"
+              aria-label="Menu"
             >
-              <Button 
-                size="sm" 
-                className="bg-accent hover:bg-accent/90 text-primary font-bold shadow-elegant whitespace-nowrap h-9 px-3 text-xs"
-              >
-                <Phone className="w-3.5 h-3.5 mr-1.5" />
-                Ligar
-              </Button>
-            </a>
-            <a 
-              href="https://wa.me/5548991952345?text=Olá, gostaria de ajuda para meu caso" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hidden sm:block flex-shrink-0"
-            >
-              <Button 
-                size="sm" 
-                className="bg-[#25D366] hover:bg-[#128C7E] text-white font-bold shadow-elegant whitespace-nowrap h-9 px-4 text-xs sm:text-sm"
-              >
-                <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5" />
-                <span className="uppercase">Falar com advogado</span>
-              </Button>
-            </a>
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-primary/98 backdrop-blur-sm border-t border-accent/20">
+          <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
+            {menuItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={handleMenuClick}
+                className="text-white/90 hover:text-white transition-colors text-base font-medium py-2 border-b border-white/10 last:border-0"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+      )}
     </header>
   );
 };

@@ -76,7 +76,7 @@ const Equipe = () => {
                     <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                       <Button className="bg-primary hover:bg-primary/90 text-accent font-bold w-full sm:w-auto">
                         <FaWhatsapp className="w-4 h-4 mr-2" />
-                        AGENDAR CONSULTORIA
+                        ENTRE EM CONTATO
                       </Button>
                     </a>
                   </div>

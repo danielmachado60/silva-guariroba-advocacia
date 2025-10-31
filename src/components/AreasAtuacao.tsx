@@ -90,7 +90,7 @@ const AreasAtuacao = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full px-4 py-2.5 bg-[#25D366] hover:bg-[#128C7E] text-white font-bold rounded-md shadow-elegant transition-colors duration-200 mt-auto"
                   >
-                    <span>Falar com especialista</span>
+                    <span>Preciso de Ajuda</span>
                     <FaWhatsapp className="w-5 h-5 ml-2" />
                   </a>
                 </div>

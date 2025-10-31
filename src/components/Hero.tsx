@@ -35,7 +35,7 @@ const Hero = () => {
               </span>
             </div>
 
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight px-4">
+            <h1 className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight px-4">
               PRECISANDO DE ADVOGADO CRIMINAL PARA SUA DEFESA OU DE SEU FAMILIAR?
             </h1>
 
@@ -61,7 +61,7 @@ const Hero = () => {
                   className="inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent/90 text-primary font-bold py-3 sm:py-4 px-8 sm:px-12 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-elegant text-sm sm:text-base w-full sm:w-auto"
                 >
                   <FaWhatsapp className="w-5 h-5" />
-                  <span>FALE COM UM ESPECIALISTA</span>
+                  <span>FALAR COM ADVOGADO CRIMINALISTA</span>
                 </a>
               </div>
               <p className="text-white/80 text-sm">
